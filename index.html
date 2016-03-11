@@ -11,7 +11,7 @@
 	<script>
 		// Handle Loaded Imports
 		function handleLoad(event) {
-		console.log('Loaded import: ' + event.target.href);
+		console.log('successfully imported: ' + event.target.href);
 		}
 
 		// Handle Errors.
@@ -20,21 +20,23 @@
 		}
 	</script>
 	<link rel="import" href="././pages/layout.html"  onload="handleLoad(event)" onerror="handleError(event)">
+	
+	
 	<!--see https://www.kirupa.com/html5/accessing_your_webcam_in_html5.htm-->
 </head>
 
 <body>
 <div class="container">
 	<div id="header">	
-<!-- 		<script>
-			var link = document.querySelector('link[rel="import"]');
+<script>
+			var link = document.queryselector('link[rel="import"]');
 			var content = link.import;
 
-			// Grab DOM from layout.html's document.
-			var el = content.querySelector('.container');
+			// grab dom from layout.html's document.
+			var el = content.queryselector('.container');
 
-			document.body.appendChild(el.cloneNode(true));
-		</script> -->
+			document.body.appendchild(el.clonenode(true));
+		</script>
     </div>
 	<div class="container-fluid">
 		<h2>Contents</h2>	
