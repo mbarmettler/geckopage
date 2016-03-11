@@ -11,9 +11,10 @@
 	<script>
 		$(document).ready(function() {
 			var content = document.querySelector('link[rel="import"]').import;
-			var el = content.content.querySelector('.navigation-container');
+			var el = content.querySelector('.navigation-container');
 
-			document.body.appendchild(el);
+			var headerelement = document.querySelector('.navigation-header')
+			headerelement.appendchild(el);
 		});
 		
 		// Handle Loaded Imports
@@ -35,7 +36,7 @@
 
 <body>
 <div class="container">
-	<div id="header">	
+	<div id="navigation-header">	
     </div>
 	<div class="container-fluid">
 		<h2>Contents</h2>	
