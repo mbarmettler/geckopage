@@ -11,6 +11,13 @@
 	<script>
 		$(document).ready(function() {
 			var content = document.querySelector('link[rel="import"]').import;
+			
+			var link = document.querySelector('link[rel="import"]');
+			link.addEventListener('load', function(e) {
+			  var importedDoc = link.import;
+			  // importedDoc points to the document under component.html
+			});
+			
 			var el = content.querySelector('.navigation-container');
 
 			var headerelement = document.querySelector('.navigation-header')
