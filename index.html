@@ -9,22 +9,13 @@
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	
 	<script>
-		$(document).ready(function() {
-			if ("import" in document.createElement("link")) {
-				  //alert "browser supports imports"
-				}
+/*		$(document).ready(function() {
 			
-			var content = document.querySelector('link[rel="import"]').import;
-			var link = document.querySelector('link[rel="import"]');
-			link.addEventListener('load', function(e) 
-			{
-				var importedDoc = link.import;
-				// importedDoc points to the document under component.html
-
-				var headerelement = document.querySelector('.navigation-header')
-				document.body.appendchild(importedDoc);
-			});
-		});
+			var content = document.querySelector('link[rel="import"]');
+			var importedDoc = content.importquerySelector('#navigation-header');
+			document.body.appendchild(document.importNode(importedDoc, true));
+				
+		});*/
 	
 		
 		// Handle Loaded Imports
@@ -46,7 +37,13 @@
 
 <body>
 <div class="container">
-	<div id="navigation-header">	
+	<div id="navigation-header">
+<script>
+			var content = document.querySelector('link[rel="import"]');
+			var importedDoc = content.importquerySelector('#navigation-header');
+			document.body.appendchild(document.importNode(importedDoc, true));
+				
+</script>	
     </div>
 	<div class="container-fluid">
 		<h2>Contents</h2>	
