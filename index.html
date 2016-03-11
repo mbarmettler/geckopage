@@ -5,55 +5,39 @@
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
-    <script src=".\js\bootstrap.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	
+	<script>
+		// Handle Loaded Imports
+		function handleLoad(event) {
+		console.log('Loaded import: ' + event.target.href);
+		}
+
+		// Handle Errors.
+		function handleError(event) {
+		console.log('Error loading import: ' + event.target.href);
+		}
+	</script>
+	<link rel="import" href="././pages/layout.html"  onload="handleLoad(event)" onerror="handleError(event)">
 	<!--see https://www.kirupa.com/html5/accessing_your_webcam_in_html5.htm-->
 </head>
 
 <body>
 <div class="container">
-  <div class="jumbotron">
-	<h1>Phelsuma grandis</h1>
-  </div>
-	<nav class="navbar navbar-default">
-	  <div class="container-fluid">
-		<!-- Brand and toggle get grouped for better mobile display -->
-		<div class="navbar-header">
-		  <button type="button" class="navbar-toggle expand" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-			<span class="sr-only">Toggle navigation</span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-		  </button>
-		   <button type="button" class="btn">
-			<span class="glyphicon glyphicon-home"/>
-		  </button>
-		</div>
+	<div id="header">	
+<!-- 		<script>
+			var link = document.querySelector('link[rel="import"]');
+			var content = link.import;
 
-		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		  <ul class="nav navbar-nav">
-			<li class="active"><a href="#">Terrariums<span class="sr-only">(current)</span></a></li>
-			<li class="dropdown">
-			  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Geckos <span class="caret"></span></a>
-			  <ul class="dropdown-menu">
-				<li><a href="#">My Geckos</a></li>
-				<li><a href="#">Breeding</a></li>
-				<li role="separator" class="divider"></li>
-				<li><a href="#">attitude and information</a></li>
-				<li role="separator" class="divider"></li>
-				<li><a href="#">Live Cam</a></li>
-			  </ul>
-			</li>
-		  </ul>
-		  
-		  <ul class="nav navbar-nav navbar-right">
-			<li><a href="#">Contact</a></li>        
-		  </ul>
-		</div><!-- /.navbar-collapse -->
-	  </div><!-- /.container-fluid -->
-	</nav>
+			// Grab DOM from layout.html's document.
+			var el = content.querySelector('.container');
+
+			document.body.appendChild(el.cloneNode(true));
+		</script> -->
+    </div>
 	<div class="container-fluid">
-	<h2>Contents</h2>
+		<h2>Contents</h2>	
 	</div>
 </div>
 </body>
