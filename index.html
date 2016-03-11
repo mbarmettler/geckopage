@@ -29,8 +29,7 @@
 <div class="container">
 	<div id="header">	
 <script>
-			var link = document.queryselector('link[rel="import"]');
-			var content = link.import;
+			var content = document.querySelector('link[rel="import"]').import;
 
 			// grab dom from layout.html's document.
 			var el = content.queryselector('.container');
