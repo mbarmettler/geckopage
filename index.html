@@ -10,8 +10,8 @@
 	
 	<script>
 		$(document).ready(function() {
-			var content = document.querySelector('link[rel="import"]').import.content;
-			var el = content.querySelector('.navigation-container');
+			var content = document.querySelector('link[rel="import"]').import;
+			var el = content.content.querySelector('.navigation-container');
 
 			document.body.appendchild(el);
 		});
