@@ -10,7 +10,10 @@
 	
 	<script>
 		$(document).ready(function() {
-		  //call your script.js function from here
+			var content = document.querySelector('link[rel="import"]').import;
+			var el = content.querySelector('.navigation-container');
+
+			document.body.appendchild(el);
 		});
 		// Handle Loaded Imports
 		function handleLoad(event) {
@@ -31,12 +34,6 @@
 <body>
 <div class="container">
 	<div id="header">	
-		<script>
-			var content = document.querySelector('link[rel="import"]').import;
-			var el = content.querySelector('.navigation-container');
-
-			document.body.appendchild(el);
-		</script>
     </div>
 	<div class="container-fluid">
 		<h2>Contents</h2>	
