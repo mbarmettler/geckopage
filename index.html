@@ -10,11 +10,12 @@
 	
 	<script>
 		$(document).ready(function() {
-			var content = document.querySelector('link[rel="import"]').import;
+			var content = document.querySelector('link[rel="import"]').import.content;
 			var el = content.querySelector('.navigation-container');
 
 			document.body.appendchild(el);
 		});
+		
 		// Handle Loaded Imports
 		function handleLoad(event) {
 		console.log('successfully imported: ' + event.target.href);
@@ -25,6 +26,7 @@
 		console.log('Error loading import: ' + event.target.href);
 		}
 	</script>
+	
 	<link rel="import" href="././pages/layout.html"  onload="handleLoad(event)" onerror="handleError(event)">
 	
 	
