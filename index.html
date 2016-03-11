@@ -10,19 +10,22 @@
 	
 	<script>
 		$(document).ready(function() {
-			var content = document.querySelector('link[rel="import"]').import;
+			if ("import" in document.createElement("link")) {
+				  alert 'browser supports imports'
+				}
 			
-		});
+			var content = document.querySelector('link[rel="import"]').import;
+			var link = document.querySelector('link[rel="import"]');
+			link.addEventListener('load', function(e) 
+			{
+				var importedDoc = link.import;
+				// importedDoc points to the document under component.html
 
-		var link = document.querySelector('link[rel="import"]');
-		link.addEventListener('load', function(e) 
-		{
-			var importedDoc = link.import;
-			// importedDoc points to the document under component.html
-
-			var headerelement = document.querySelector('.navigation-header')
-			document.body.appendchild(importedDoc);
+				var headerelement = document.querySelector('.navigation-header')
+				document.body.appendchild(importedDoc);
+			});
 		});
+	
 		
 		// Handle Loaded Imports
 		function handleLoad(event) {
