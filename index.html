@@ -14,14 +14,17 @@
 			
 			var link = document.querySelector('link[rel="import"]');
 			link.addEventListener('load', function(e) {
-			  var importedDoc = link.import;
-			  // importedDoc points to the document under component.html
+				var importedDoc = link.import;
+				// importedDoc points to the document under component.html
+			  
+				var headerelement = document.querySelector('.navigation-header')
+				headerelement.appendchild(importedDoc);
 			});
 			
-			var el = content.querySelector('.navigation-container');
+			//var el = content.querySelector('.navigation-container');
 
-			var headerelement = document.querySelector('.navigation-header')
-			headerelement.appendchild(el);
+			//var headerelement = document.querySelector('.navigation-header')
+			//headerelement.appendchild(el);
 		});
 		
 		// Handle Loaded Imports
