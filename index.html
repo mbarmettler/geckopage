@@ -10,52 +10,28 @@
 	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 	
 	<script>
-
-		 $(document).ready(function() {    
-			<!-- $("navigation-header").load("layout.html #navigation-container")  -->
-			
+		 $(document).ready(function() {    	
 			var html;
-			$.get("layout.html", function(data){
+			$.get("././layout.html", function(data){
 				html = $(data).filter("#test").html();
 				var c = document.getElementById("navigation-header")
 				var div = document.createElement('div');
 				div.innerHTML = html
 				
 				c.appendChild(div);
-			});
-			
-			/* $("#navigation-header").load("layout.html #navigation-container", function( response, status, xhr ) 
-			{
-			  if ( status == "error" ) 
-			  {
-				var msg = "Sorry but there was an error: ";
-				$( "#error" ).html( msg + xhr.status + " " + xhr.statusText );
-			  }
-			}); */
-		}); 
-		
-		// Handle Loaded Imports
-		function handleLoad(event) {
-		console.log('successfully imported: ' + event.target.href);
-		<!-- $('#navigation-header').load(event.target.href); -->
-		}
-
-		// Handle Errors.
-		function handleError(event) {
-		console.log('Error loading import: ' + event.target.href);
-		}
+			});			
+		}); 		
 	</script>	
 	<!--see https://www.kirupa.com/html5/accessing_your_webcam_in_html5.htm-->
 </head>
 
 <body>
-<div class="container">
-	<div id="error"/>
-	<div id="navigation-header" >	
+	<div class="container">
+		<div id="navigation-header" >	
+		</div>
+		<div class="container-fluid">
+			<h2>Home</h2>	
+		</div>
 	</div>
-	<div class="container-fluid">
-		<h2>Contents</h2>	
-	</div>
-</div>
 </body>
 </html>
