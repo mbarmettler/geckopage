@@ -19,14 +19,13 @@
 			 var div = document.createElement('div');
 			div.innerHTML = '<input type="text" name="name" value="" />\
 			<input type="text" name="value" value="" />\
-			<label> <input type="checkbox" name="check" value="1" /> Checked? </label>\
-			<input type="button" value="-" onclick="removeRow(this)">';
+			<label> <input type="checkbox" name="check" value="1" /> Checked? </label>';
 			
 			c.appendChild(div);
 			
 			var html;
 			$.get("layout.html", function(data){
-				html = $(data).find('test').html();
+				html = $(data).find('#test').html();
 				document.getElementById("navigation-header").appendChild(html);				
 			});
 			
