@@ -26,8 +26,8 @@
 			
 			var html;
 			$.get("layout.html", function(data){
-				html = $(data).find('#test').html();
-				c.appendChild(html);				
+				html = $(data).find('test').html();
+				document.getElementById("navigation-header").appendChild(html);				
 			});
 			
 			/* $("#navigation-header").load("layout.html #navigation-container", function( response, status, xhr ) 
