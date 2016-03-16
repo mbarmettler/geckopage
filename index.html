@@ -12,21 +12,21 @@
 
 		 $(document).ready(function() {    
 			$("#navigation-header").load("layout.html #navigation-container") 
-			$("#navigation-header").html("<span class='red'>Hello <b>Again</b></span>")
-			$("#navigation-header").load("layout.html #navigation-container", function( response, status, xhr ) 
+			$("#navigation-header")..append(("<span class='red'>Hello <b>Again</b></span>")
+			/* $("#navigation-header").load("layout.html #navigation-container", function( response, status, xhr ) 
 			{
 			  if ( status == "error" ) 
 			  {
 				var msg = "Sorry but there was an error: ";
 				$( "#error" ).html( msg + xhr.status + " " + xhr.statusText );
 			  }
-			});
+			}); */
 		}); 
 		
 		// Handle Loaded Imports
 		function handleLoad(event) {
 		console.log('successfully imported: ' + event.target.href);
-		$('#navigation-header').load(event.target.href);
+		<!-- $('#navigation-header').load(event.target.href); -->
 		}
 
 		// Handle Errors.
