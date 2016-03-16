@@ -14,13 +14,13 @@
 			var content = document.querySelector('link[rel="import"]');
 			var importedDoc = content.importquerySelector('#navigation-header');
 			document.body.appendchild(document.importNode(importedDoc, true));
-				
-		});*/
-	
+				*/
+			  
 		
 		// Handle Loaded Imports
 		function handleLoad(event) {
 		console.log('successfully imported: ' + event.target.href);
+		$('#navigation-header').load('layout.html');
 		}
 
 		// Handle Errors.
@@ -38,12 +38,6 @@
 <body>
 <div class="container">
 	<div id="navigation-header">
-<script>
-			var content = document.querySelector('link[rel="import"]');
-			var importedDoc = content.import.querySelector('#navigation-header');
-			document.body.appendchild(document.importNode(importedDoc, true));
-				
-</script>	
     </div>
 	<div class="container-fluid">
 		<h2>Contents</h2>	
