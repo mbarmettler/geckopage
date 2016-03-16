@@ -25,8 +25,8 @@
 			
 			var html;
 			$.get("layout.html", function(data){
-				html = $(data).find('#test').html();
-				document.getElementById("navigation-header").appendChild(html);				
+				html = $(data).filter("#test").html();
+				document.getElementById("navigation-header").innerhtml = html;	
 			});
 			
 			/* $("#navigation-header").load("layout.html #navigation-container", function( response, status, xhr ) 
