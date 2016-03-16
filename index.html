@@ -14,7 +14,9 @@
 
 		 $(document).ready(function() {    
 			$("#navigation-header").load("layout.html #navigation-container") 
-			document.Getelementbyid("#navigation-header").append("<span class='red'>Hello <b>Again</b></span>")
+			var c = document.getElementById("#navigation-header")
+			c.append("<span class='red'>Hello <b>Again</b></span>")
+			
 			/* $("#navigation-header").load("layout.html #navigation-container", function( response, status, xhr ) 
 			{
 			  if ( status == "error" ) 
