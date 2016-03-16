@@ -15,8 +15,20 @@
 		 $(document).ready(function() {    
 			$("navigation-header").load("layout.html #navigation-container") 
 			var c = document.getElementById("navigation-header")
-			c.insertAdjacentHTML('beforeend', "<span class='red'>Hello <b>Again</b></span>")
-
+			
+			 var div = document.createElement('div');
+			div.innerHTML = '<input type="text" name="name" value="" />\
+			<input type="text" name="value" value="" />\
+			<label> <input type="checkbox" name="check" value="1" /> Checked? </label>\
+			<input type="button" value="-" onclick="removeRow(this)">';
+			
+			c.appendChild(div);
+			
+			var html;
+			$.get("layout.html", function(data){
+				html = $(data).find('#glr1').html();
+			});
+			
 			/* $("#navigation-header").load("layout.html #navigation-container", function( response, status, xhr ) 
 			{
 			  if ( status == "error" ) 
@@ -44,7 +56,7 @@
 <body>
 <div class="container">
 	<div id="error"/>
-	<div id="navigation-header">	
+	<div id="navigation-header" >	
 	</div>
 	<div class="container-fluid">
 		<h2>Contents</h2>	
