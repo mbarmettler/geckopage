@@ -13,10 +13,10 @@
 	<script>
 
 		 $(document).ready(function() {    
-			$("#navigation-header").load("layout.html #navigation-container") 
-			var c = document.getElementById("#navigation-header")
-			c.append("<span class='red'>Hello <b>Again</b></span>")
-			
+			$("navigation-header").load("layout.html #navigation-container") 
+			var c = document.getElementById("navigation-header")
+			c.insertAdjacentHTML('beforeend', "<span class='red'>Hello <b>Again</b></span>")
+
 			/* $("#navigation-header").load("layout.html #navigation-container", function( response, status, xhr ) 
 			{
 			  if ( status == "error" ) 
@@ -44,8 +44,8 @@
 <body>
 <div class="container">
 	<div id="error"/>
-	<div id="navigation-header">
-    </div>
+	<div id="navigation-header">	
+	</div>
 	<div class="container-fluid">
 		<h2>Contents</h2>	
 	</div>
