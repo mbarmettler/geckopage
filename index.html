@@ -9,13 +9,10 @@
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	
 	<script>
-/*		$(document).ready(function() {
-			
-			var content = document.querySelector('link[rel="import"]');
-			var importedDoc = content.importquerySelector('#navigation-header');
-			document.body.appendchild(document.importNode(importedDoc, true));
-				*/
-			  
+
+		 $(document).ready(function() {    
+			$("#navigation-header").load("layout.html #navigation-container") 
+		}); 
 		
 		// Handle Loaded Imports
 		function handleLoad(event) {
@@ -28,7 +25,7 @@
 		console.log('Error loading import: ' + event.target.href);
 		}
 	</script>
-	
+	  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 	<link rel="import" href="././pages/layout.html"  onload="handleLoad(event)" onerror="handleError(event)">
 	
 	
