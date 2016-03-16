@@ -13,20 +13,16 @@
 	<script>
 
 		 $(document).ready(function() {    
-			$("navigation-header").load("layout.html #navigation-container") 
-			var c = document.getElementById("navigation-header")
-			
-			 var div = document.createElement('div');
-			div.innerHTML = '<input type="text" name="name" value="" />\
-			<input type="text" name="value" value="" />\
-			<label> <input type="checkbox" name="check" value="1" /> Checked? </label>';
-			
-			c.appendChild(div);
+			<!-- $("navigation-header").load("layout.html #navigation-container")  -->
 			
 			var html;
 			$.get("layout.html", function(data){
 				html = $(data).filter("#test").html();
-				document.getElementById("navigation-header").html = html;	
+				var c = document.getElementById("navigation-header")
+				var div = document.createElement('div');
+				div.innerHTML = html
+				
+				c.appendChild(div);
 			});
 			
 			/* $("#navigation-header").load("layout.html #navigation-container", function( response, status, xhr ) 
