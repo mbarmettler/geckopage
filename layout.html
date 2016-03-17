@@ -15,8 +15,16 @@
 		  console.log($(this).attr("href"));
 		  var pathname = window.location.pathname; // Returns path only
 		  var url      = window.location.href;     // Returns full URL
-		  console.log(pathname)
-		  console.log(url)
+		  
+		  if(pathname.search("pages") > 0)
+		  {
+			if($(this).attr("href").contains("index"))
+			{
+				$(this).prop("href", "./../index.html") 
+			}
+		  }		  
+		  //console.log(pathname)
+		  //console.log(url)
 		  // $(this).prop("href", "http://www.google.ch") 
 		});
 	 }); 	
