@@ -11,16 +11,13 @@
 	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 	
 	<script>
-		$.get("/pages/layout.html")
-		
 		 $(document).ready(function() {    	
 			var html;
-			$.get("/pages/layout.html", function(data){
-				html = $(data).filter("#test").html();
+			$.get("./pages/layout.html", function(data){
+				html = $(data).filter("#navbar").html();
 				var c = document.getElementById("navigation-header")
 				var div = document.createElement('div');
 				div.innerHTML = html
-				
 				c.appendChild(div);
 			});			
 		}); 		
