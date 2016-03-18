@@ -15,8 +15,15 @@
 	<script>
 		 $(document).ready(function() {    	
 			
-			$("#navigation-header").load("layout.html #navbar, script");
+			//$("#navigation-header").load("layout.html #navbar, script");
 			
+			//
+			$.get('layout.html', function(result){
+			$result = $(result);
+
+			$result.find('#navbar').appendTo('#navigation-header');
+			$result.find('script').appendTo('#navigation-header');
+			}, 'html');
 			//old loading code
 			/*
 			var html;
