@@ -10,14 +10,41 @@
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 	
+	<!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcLssvonskc5Udo0L5vzi_gPcfMcYAERk&callback=initMap"/> -->
+
 	<link rel="stylesheet" href="http://mbarmettler.github.io/geckopage/css/site.css"/>
 	
 	<script>
 		 $(document).ready(function() {    	
 			$("#navigation-header").load("../layout.html #navbar, script");
 		}); 		
+		
+		$('#submit').click(function(){
+			var fName = $("input#firstName").val();
+			var lName = $("input#lastName").val();
+			var phone = $("input#phone").val();
+			var email = $("input#email").val();
+			var website = $("input#website").val();
+			var message = $("input#message").val();
+
+			var dataString = 'email=' + email + '&message=' + message + '&subject=' + subject + '&name=' + name ; 
+
+			$.ajax({
+				url: "scripts/mail.php",
+				type:   'POST',
+				data: dataString,
+				success: function(msg){
+					disablePopupContact();
+					$("#popupMessageSent").css("visibility", "visible");
+				},
+				error: function() {
+					alert("Bad submit");
+				}
+			});
+		});
 	</script>	
-	<!--see https://www.kirupa.com/html5/accessing_your_webcam_in_html5.htm-->
+	<!-- send mail -->
+	<!-- https://scotch.io/tutorials/submitting-ajax-forms-with-jquery -->
 </head>
 <body>
 	<div class="container">
@@ -46,7 +73,7 @@
 					  </div>
 					  <div class="form-group">
 						  <div class="col-xs-10">
-							  <input class="form-control" placeholder="Website URL" type="homepage">
+							  <input class="form-control" name="website" placeholder="Website URL" type="homepage">
 						  </div>
 					  </div>
 					  <div class="form-group">
@@ -73,8 +100,21 @@
 					</div>					
 				  </div><!--/row-->
 				</div><!--/col-5-->
-				<div class="col-sm-6 map">
-				  <div class="google-map-canvas" id="map-canvas">
+				<div class="col-sm-4 map">
+				  <div class="google-map-canvas" id="map-canvas" style="border-color:red; border-width: 1;">
+				  
+				   <script>
+						function initMap() {
+						  var mapProp = 
+						  {
+							center: new google.maps.LatLng(51.508742,-0.120850),
+							zoom: 5,
+							mapTypeId: google.maps.MapTypeId.SATELLITE
+						  };
+						  var map= new google.maps.Map(document.getElementById("map-canvas"), mapProp);
+						}
+					</script>
+					
 				  </div>
 				</div>
 			</div>			  

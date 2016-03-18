@@ -1,3 +1,8 @@
+body > .container 
+{ 
+	padding-bottom: 70px; 
+}
+
 .navigation-container
 {
 	background-color: limegreen !important;
@@ -7,3 +12,6 @@
 {
 	background-color: transparent !important;
 }
+
+
+
