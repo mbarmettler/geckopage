@@ -12,6 +12,10 @@
 	
 	<script>
 		 $(document).ready(function() {    	
+			
+			$("#navigation-header").load("layout.html");
+			
+			/*
 			var html;
 			$.get("layout.html", function(data){
 				html = $(data).filter("#navbar").html();
@@ -19,7 +23,7 @@
 				var div = document.createElement('div');
 				div.innerHTML = html
 				c.appendChild(div);
-			});			
+			});		*/	
 		}); 		
 	</script>	
 	<!--see https://www.kirupa.com/html5/accessing_your_webcam_in_html5.htm-->
