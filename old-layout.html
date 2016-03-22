@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	
+	<link rel="stylesheet" href="http://mbarmettler.github.io/geckopage/css/site.css"/>
+	
+	<script>
+	 $(document).ready(function() {   
+		/*$("a").each(function( index ) {
+		  console.log($(this).attr("href"));
+		  var pathname = window.location.pathname; // Returns path only
+		  var url      = window.location.href;     // Returns full URL
+		  
+		  if(pathname.search("pages") > 0)
+		  {
+			if($(this).attr("href").contains("index"))
+			{
+				$(this).prop("href", "./../index.html") 
+			}
+		  }		  
+		  window.alert("initailized layout");
+		  //console.log(pathname)
+		  //console.log(url)
+		  // $(this).prop("href", "http://www.google.ch") 
+		});*/
+		var pathname = window.location.pathname;
+		console.log(pathname)
+	 }); 	
+	 
+	$(document).ready(function () {
+		$('.nav li a').click(function(e) {
+
+			$('.nav li').removeClass('active');
+
+			var $parent = $(this).parent();
+			if (!$parent.hasClass('active')) {
+				$parent.addClass('active');
+			}
+			e.preventDefault();
+		});
+	});
+	</script>
+</head>
+<body>
+<div class="navigation-container" id="navbar">
+ <div class="jumbotron">
+	<h1>Phelsuma grandis</h1>
+  </div>
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle expand" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>
+		   <a href="http://mbarmettler.github.io/geckopage/" class="btn btn-lg">
+			<span class="glyphicon glyphicon-home" style="color:green"/>
+		  </a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		  <ul class="nav navbar-nav">
+			<li><a href="http://mbarmettler.github.io/geckopage/pages/terrariem.html">Terrariums</a></li>
+			<li class="dropdown">
+			  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Geckos <span class="caret"></span></a>
+			  <ul class="dropdown-menu">
+				<li><a href="http://mbarmettler.github.io/geckopage/pages/geckos.html">My Geckos</a></li>
+				<li><a href="#">Breeding <span class="label label-default">coming soon</span></a></li>
+				<li role="separator" class="divider"></li>
+				<li><a href="#">attitude and information <span class="label label-default">coming soon</span></a></li>
+				<li role="separator" class="divider"></li>
+				<li><a href="#">Live Cam <span class="label label-default">coming soon</span></a></li>
+			  </ul>
+			</li>
+			<li class="dropdown">
+			  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Other pets <span class="caret"></span></a>
+			  <ul class="dropdown-menu">
+				<li><a href="#">rabbits <span class="label label-default">coming soon</span></a></li>
+				<li><a href="#">cat <span class="label label-default">coming soon</span></a></li>
+			  </ul>
+			</li>
+		  </ul>
+		  
+		  <ul class="nav navbar-nav navbar-right">
+			<li><a href="http://mbarmettler.github.io/geckopage/pages/contact.html">Contact</a></li>        
+		  </ul>
+		</div><!-- /.navbar-collapse -->
+		
+		<nav class="navbar navbar-default navbar-fixed-bottom">
+			<div class="container">
+				<p class="text-muted" style="margin-top: 20px;margin-bottom: 20px;font-size:10pt;">© Copyright 2016 by Mike Barmettler</p>	
+				<div class="pull-right">				
+					<h4>Progress of this site:</h4>
+					<div class="progress">
+					  <div class="progress-bar progress-bar-success" style="width: 35%">
+						<span class="sr-only">35% Complete (success)</span>
+					  </div>
+					</div>				
+				</div>
+			</div>
+		</nav>
+	  </div><!-- /.container-fluid -->
+	</nav>
+</div>
+</body>
+</html>
