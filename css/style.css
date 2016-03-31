@@ -147,6 +147,10 @@ body {
     padding: 20px;
 }
 
+.mainmenu-area ul.navbar-nav li a:hover {
+	color: #4DAD18;
+}
+
 .mainmenu-area ul.navbar-nav li:hover a, .mainmenu-area ul.navbar-nav li.active a {background: #222}
 .mainmenu-area .nav > li > a:focus {color: #19B821}
 
@@ -995,6 +999,10 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button{background
 
 .pagination > li > a, .pagination > li > span {
   color: #19B821;
+}
+
+.dropdown-menu{
+	background-color: #222;
 }
 
 .dropdown-menu .divider {
