@@ -7,6 +7,6 @@ if($_POST)
     $message = $_POST['form_msg'];
 
 	//send email
-    mail("greenlion1010@gmail.com", "GeckoPage Contact Form" .$email, $message);
+    mail("greenlion1010@gmail.com", "GeckoPage Contact Form - by: " .$email, $message);
 }
 ?>

@@ -60,8 +60,7 @@
 				contentType: "application/json; charset=utf-8",
 				success: function(msg) {
 					if (transport.status == 200) $("#container").html("Success"); else alert("Please try again later"); 
-					disablePopupContact();
-					$("#popupMessageSent").css("visibility", "visible");
+					//$("#popupMessageSent").css("visibility", "visible");
 				},
 				error: function() {
 					alert("Bad submit");
