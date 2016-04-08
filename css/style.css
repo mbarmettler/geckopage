@@ -1013,3 +1013,10 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button{background
 	padding-bottom: 0px;
     padding-top: 00px;
 }
+
+/**/
+/*Bootstrap ovverides*/
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover
+{
+	background-color: #222;
+}
