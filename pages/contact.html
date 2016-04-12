@@ -53,14 +53,20 @@
 			var dataString = 'email=' + email + '&message=' + message + '&subject=' + subject + '&name=' + name ; 
 
 			$.ajax({
-				url: "scripts/mail.php",
+				url: "http://mbarmettler.github.io/geckopage/scripts/mail.php",
 				type:   'POST',
 				cache: false,
 				data: dataString,
 				contentType: "application/json; charset=utf-8",
 				success: function(msg) {
-					if (transport.status == 200) $("#container").html("Success"); else alert("Please try again later"); 
-					//$("#popupMessageSent").css("visibility", "visible");
+					if (transport.status == 200)
+					{
+						$("#container").html("<div class="alert alert-success alert-dismissible" role="alert">  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>Success!</strong> Successfully sent your Message to us. We'll contatc you soon.</div>");
+					}					
+					else 
+					{
+						$("#container").html("<div class="alert alert-warning alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>Warning!</strong> Failed to sent your Message to us. Please try again later.</div>"); 
+					}
 				},
 				error: function() {
 					alert("Bad submit");
@@ -132,8 +138,7 @@
 				  </div><!--/row-->
 				</div><!--/col-5-->
 				<div class="col-sm-4 map">
-				  <div class="google-map-canvas" id="map-canvas" style="border-color:red; border-width: 1;">
-				  
+				  <div class="google-map-canvas" id="map-canvas" style="border-color:red; border-width: 1px;">
 				   <script>
 						function initMap() {
 						  var mapProp = 
@@ -144,8 +149,7 @@
 						  };
 						  var map= new google.maps.Map(document.getElementById("map-canvas"), mapProp);
 						}
-					</script>
-					
+					</script>					
 				  </div>
 				</div>
 			</div>			  
