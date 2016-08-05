@@ -36,13 +36,16 @@
     <!-- Main Script -->
     <script src="../js/main.js"></script>
 	
+	<!-- gallery-->
+	<link href="//cdn.rawgit.com/noelboss/featherlight/1.5.0/release/featherlight.min.css" type="text/css" rel="stylesheet" />
+	
 	<script>
 		 $(document).ready(function() {    	
 			$("#navigation-header").load("../layout.html #navbar, script");		
 			$("#navigation-footer").load("../layout.html #footerbar, script");
 		}); 		
 	</script>	
-	<!--see https://www.kirupa.com/html5/accessing_your_webcam_in_html5.htm-->
+	<!--see gallery http://noelboss.github.io/featherlight/-->
 </head>
 <body>
 	<!--placeholder for header navigation-->
@@ -61,22 +64,22 @@
 				  we also have a 16 years old cat named "Tonda" - which is, as we assume, related with Garfield.</p>
 				<div class="row">
 					<div class="col-xs-6 col-md-3">
-						<a href="#" class="thumbnail">
+						<a href="#" class="thumbnail" data-featherlight="../img/colors/1.jpg">
 							<img src="../img/colors/1.jpg" height="150" alt="MapMadagaskar">
 						</a>
 					</div>
 					<div class="col-xs-6 col-md-3">
-						<a href="#" class="thumbnail">
+						<a href="#" class="thumbnail" data-featherlight="../img/colors/2.jpg">
 							<img src="../img/colors/2.jpg" height="150" alt="MapMadagaskar">
 						</a>
 					</div>
 					<div class="col-xs-6 col-md-3">
-						<a href="#" class="thumbnail">
+						<a href="#" class="thumbnail" data-featherlight="../img/colors/3.jpg">
 							<img src="../img/colors/3.jpg" height="150" alt="MapMadagaskar">
 						</a>
 					</div>
 					<div class="col-xs-6 col-md-3">
-						<a href="#" class="thumbnail">
+						<a href="#" class="thumbnail" data-featherlight="../img/colors/4.jpg">
 							<img src="../img/colors/4.jpg" height="150" alt="MapMadagaskar">
 						</a>
 					</div>
@@ -85,22 +88,22 @@
 				  <p>we also have a group of dwarf rabbits which are called Gimli, Pippin and Silver.</p>
 				<div class="row">
 					<div class="col-xs-6 col-md-3">
-						<a href="#" class="thumbnail">
+						<a href="#" class="thumbnail" data-featherlight="../img/colors/1.jpg">
 							<img src="../img/colors/1.jpg" height="150" alt="MapMadagaskar">
 						</a>
 					</div>
 					<div class="col-xs-6 col-md-3">
-						<a href="#" class="thumbnail">
+						<a href="#" class="thumbnail" data-featherlight="../img/colors/2.jpg">
 							<img src="../img/colors/2.jpg" height="150" alt="MapMadagaskar">
 						</a>
 					</div>
 					<div class="col-xs-6 col-md-3">
-						<a href="#" class="thumbnail">
+						<a href="#" class="thumbnail" data-featherlight="../img/colors/3.jpg">
 							<img src="../img/colors/3.jpg" height="150" alt="MapMadagaskar">
 						</a>
 					</div>
 					<div class="col-xs-6 col-md-3">
-						<a href="#" class="thumbnail">
+						<a href="#" class="thumbnail" data-featherlight="../img/colors/4.jpg">
 							<img src="../img/colors/4.jpg" height="150" alt="MapMadagaskar">
 						</a>
 					</div>
@@ -116,5 +119,7 @@
 	<!--placeholder for footer navigation-->
 	<div id="navigation-footer">
 	</div>
+	<script src="//code.jquery.com/jquery-latest.js"></script>
+<script src="//cdn.rawgit.com/noelboss/featherlight/1.5.0/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>
