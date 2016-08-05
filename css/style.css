@@ -175,6 +175,7 @@ position: absolute;
 transform: rotate(3deg);
 width: 108%;
 z-index: 9;
+box-shadow: 2px 0.7px 1px #777777, 0 -2px rgba(0, 0, 0, 0.4);
 }
 
 .slide-bg {
@@ -246,7 +247,7 @@ z-index: 9;
 
 .promo-area .zigzag-bottom, .brands-area .zigzag-bottom{background: #fff}
 .single-promo {
-    border: 1px solid #4DAD18;
+    /*border: 1px solid #4DAD18;*/
     font-size: 25px;
     font-weight: 200;
     padding: 20px 10px;
