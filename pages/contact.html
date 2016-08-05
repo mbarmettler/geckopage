@@ -138,18 +138,20 @@
 				  </div><!--/row-->
 				</div><!--/col-5-->
 				<div class="col-sm-4 map">
-				  <div class="google-map-canvas" id="map-canvas" style="border-color:red; border-width: 1px;">
-				   <script>
-						function initMap() {
-						  var mapProp = 
-						  {
-							center: new google.maps.LatLng(51.508742,-0.120850),
-							zoom: 5,
-							mapTypeId: google.maps.MapTypeId.SATELLITE
-						  };
-						  var map= new google.maps.Map(document.getElementById("map-canvas"), mapProp);
-						}
-					</script>					
+				<!-- G-Key - AIzaSyDcLssvonskc5Udo0L5vzi_gPcfMcYAERk -->
+				<div class="google-map-canvas" id="map-canvas" style="border-color:red; border-width: 1px;">
+					<script>
+						  function initMap() {
+							var mapDiv = document.getElementById('map-canvas');
+							var map = new google.maps.Map(mapDiv, {
+								center: {lat: 44.540, lng: -78.546},
+								zoom: 8
+							});
+						  }
+					</script>
+					<script async defer
+						src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcLssvonskc5Udo0L5vzi_gPcfMcYAERk&callback=initMap">
+					</script>				
 				  </div>
 				</div>
 			</div>			  
